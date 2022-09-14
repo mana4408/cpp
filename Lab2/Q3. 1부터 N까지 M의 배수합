@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, m, result = 0;
+
+	cin >> n >> m;
+	cout << "N 값은 " << n << ", M 값은 " << m << endl;
+
+	for (int i = m; i <= n; i++) {
+		if (i % m == 0)
+			result += i;
+	}
+
+	cout << result << endl;
+	return 0;
+}
