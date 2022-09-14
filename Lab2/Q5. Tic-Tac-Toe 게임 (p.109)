@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int x, y;
+	char board[3][3]{ ' ', };
+
+	for (x = 0; x < 3; x++)
+		for (y = 0; y < 3; y++) board[x][y] = ' ';
+
+	for (int k = 0; k < 9; k++) {
+		cout << "(x, y) 좌표: ";
+		cin >> x >> y;
+		board[x][y] = (k % 2 == 0) ? 'X' : 'O';
+
+		for (int i = 0; i < 3; i++) {
+			cout << "---l---l---" << endl;
+			cout << " " << board[i][0] << " l " << board[i][1] << " l " << board[i][2] << endl;
+		}
+		cout << "---l---l---" << endl;
+	}
+
+	return 0;
+}
