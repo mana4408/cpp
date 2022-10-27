@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	Student students[5] =
+	Student students[3] =
 	{
 		{"홍길동", "202201"},
 		{"이춘향", "202202"},
@@ -16,6 +16,12 @@ int main()
 	Labs lab02{ "영상처리 연구실", true, 3 };
 	for (Student st : students)
 		lab02.setStudent(st);
+	lab02.print();
+
+	applyLab(lab02, 2);
+
+	cout << "-----------------------" << endl;
+
 	lab02.print();
 
 	return 0;

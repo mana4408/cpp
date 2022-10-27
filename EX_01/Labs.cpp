@@ -63,6 +63,13 @@ void Labs::moreNumber()
 
 void applyLab(Labs& lab, int n)
 {
+	std::cout << "학생 정보를 입력/추가하시오" << std::endl;
+	for (int i = 0; i < n; i++) {
+		std::string name, tel;
+		std::cin >> name >> tel;
+		Student* st = new Student{ name, tel };
+		lab.setStudent(*st);
+	}
 	lab.addStudent(n);
 }
 
