@@ -34,6 +34,10 @@ public:
 	{
 		return Vector{ x * n, y * n, z * n };
 	}
+	Vector operator/(float n) const
+	{
+		return Vector{ x / n, y / n, z / n };
+	}
 	Vector& operator++()
 	{
 		++x;
@@ -118,6 +122,9 @@ int main()
 	Vector v11 = v1--;
 	v11.print();
 	v1.print();
+
+	Vector v12 = v1 / 3.0f; // v1.operator/(3.0f);
+	v12.print();
 
 	return 0;
 }
