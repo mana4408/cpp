@@ -1,0 +1,48 @@
+#include <iostream>
+#include <random>
+using namespace std;
+
+int main()
+{
+	random_device rd;
+	mt19937 mtRand(rd());
+	uniform_int_distribution<> dist(1, 9);
+
+	int x, y, result, answer;
+	char ch;
+
+	cout << "산수 문제를 자동으로 출제합니다." << endl;
+	x = dist(mtRand);
+	y = dist(mtRand);
+	cout << x << " " << y << endl;
+	
+	cout << "연산자 입력하기(+, -, *, /)" << endl;
+	cin >> ch;
+
+	switch (ch)
+	{
+	case '+':
+		result = x + y;
+		break;
+	case '-':
+		result = x - y;
+		break;
+	case '*':
+		result = x * y;
+		break;
+	case '/':
+		result = x / y;
+		break;
+	default:
+		break;
+	}
+
+	cout << "결과 입력하기" << endl;
+	cin >> answer;
+
+	if (result == answer)
+		cout << "맞았습니다" << endl;
+	else
+		cout << "틀렸습니다" << endl;
+	return 0;
+}

@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int vo = 0, co = 0;	// vowel = 모음, consonant = 자음
+	char c;
+
+	cout << "영문자를 입력하고 ctrl+z를 치세요" << endl;
+	while (cin >> c) {
+		switch (c) {
+		case 'a':	case 'e':	case 'i':	case 'o':	case 'u':
+			vo++;
+			break;
+		default:
+			if (c < 97)
+				cout << "Check to alphabet" << endl;
+			else
+				co++;
+			break;
+		}
+	}
+	cout << "모음: " << vo << endl;
+	cout << "자음: " << co << endl;
+	return 0;
+}
